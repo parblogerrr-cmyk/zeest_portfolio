@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Staggered animation for blog cards
     const blogCards = document.querySelectorAll('.blog-card.fade-in');
     blogCards.forEach((card, index) => {
-        card.style.transitionDelay = `${index * 200}ms`; // 200ms delay per item for slower appear
+        card.style.transitionDelay = `${index * 50}ms`; // 50ms delay per item for faster appear
     });
 
     const fadeElements = document.querySelectorAll('.fade-in');
