@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 4. Scroll Animations
+    // 4. Scroll Animations & Background Slideshow Logic
     const observerOptions = {
         threshold: 0.1
     };
@@ -82,6 +82,44 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.animate-on-scroll').forEach(el => {
         observer.observe(el);
     });
+
+    // 5. Auto-Generate Background Slideshow for Articles
+    const articleImages = document.querySelectorAll('.content img, .gallery-collage-3 img, .gallery-grid-2 img, .gallery-grid-3 img');
+
+    if (articleImages.length > 0) {
+        // Create wrapper
+        const bgWrapper = document.createElement('div');
+        bgWrapper.className = 'bg-slideshow-wrapper';
+        document.body.prepend(bgWrapper);
+
+        // Collect images and hide originals
+        const imageUrls = [];
+        articleImages.forEach(img => {
+            imageUrls.push(img.src);
+            img.style.display = 'none'; // Hide original
+        });
+
+        // Populate wrapper
+        imageUrls.forEach((url, index) => {
+            const slide = document.createElement('div');
+            slide.className = 'bg-slide';
+            if (index === 0) slide.classList.add('active'); // Start first one active
+            slide.style.backgroundImage = `url('${url}')`;
+            bgWrapper.appendChild(slide);
+        });
+
+        // Start Slideshow if > 1 image
+        if (imageUrls.length > 1) {
+            let currentSlide = 0;
+            const slides = document.querySelectorAll('.bg-slide');
+
+            setInterval(() => {
+                slides[currentSlide].classList.remove('active');
+                currentSlide = (currentSlide + 1) % slides.length;
+                slides[currentSlide].classList.add('active');
+            }, 5000); // 5 seconds per slide
+        }
+    }
 
     // 3. Smooth Scroll (Optional basic smooth scroll for anchors)
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
