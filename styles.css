@@ -271,6 +271,8 @@ img {
     /* Slightly larger text */
     line-height: 1.6;
     color: var(--text-color);
+    text-align: center;
+    /* Centered as requested */
 }
 
 .hero-text {
