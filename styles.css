@@ -52,9 +52,110 @@ ul {
     list-style: none;
 }
 
+
 img {
     max-width: 100%;
     display: block;
+    height: auto;
+}
+
+/* Editorial Image Styles */
+.featured-image {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.img-float-left {
+    float: left;
+    width: 40%;
+    margin-right: 2rem;
+    margin-bottom: 1.5rem;
+    margin-top: 0.5rem;
+    clear: left;
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+.img-float-right {
+    float: right;
+    width: 45%;
+    margin-left: 2rem;
+    margin-bottom: 1.5rem;
+    margin-top: 0.5rem;
+    clear: right;
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+.gallery-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin: 2.5rem 0;
+}
+
+.gallery-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 2.5rem 0;
+}
+
+.gallery-collage-3 {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: repeat(2, 200px);
+    gap: 1rem;
+    margin: 2.5rem 0;
+}
+
+.gallery-collage-3 img:first-child {
+    grid-row: 1 / -1;
+    /* Spans both rows */
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-collage-3 img {
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.caption {
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+    text-align: center;
+    margin-top: -1.5rem;
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+
+    .img-float-left,
+    .img-float-right {
+        float: none;
+        width: 100%;
+        margin: 1.5rem 0;
+    }
+
+    .gallery-collage-3 {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .gallery-grid-2,
+    .gallery-grid-3 {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-collage-3 img:first-child {
+        grid-row: auto;
+        height: 300px;
+    }
 }
 
 /* Layout Utilities */
