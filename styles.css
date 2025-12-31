@@ -256,16 +256,19 @@ img {
 
 /* About Section */
 .about-section {
-    min-height: 80vh;
-    /* Make it feel substantial */
+    min-height: 100vh;
+    /* Full viewport height for vertical centering */
     display: flex;
+    justify-content: center;
+    /* Horizontally center content */
     align-items: center;
-    padding: 100px 0;
+    /* Vertically center content */
+    padding: 0;
 }
 
 .about-text {
-    max-width: 1000px;
-    /* Increased from default constraint if any */
+    max-width: 800px;
+    /* Reduced width for better "centered" feeling */
     margin: 0 auto;
     font-size: clamp(1.1rem, 2vw, 1.3rem);
     /* Slightly larger text */
