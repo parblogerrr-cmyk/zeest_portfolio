@@ -258,36 +258,26 @@ img {
 .about-section {
     min-height: 100vh;
     display: flex;
+    align-items: center;
+    /* Vertically center the container */
     padding: 0;
-    position: relative;
 }
 
-.about-section .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* Keeps the block centered */
-    width: 100% !important;
-    /* Force full width override */
-    max-width: 100% !important;
-    /* reset any max-width */
-    margin: 0 !important;
-    padding: 0 20px;
-    height: 100%;
-    /* text-align: center; Removed to allow straight line text */
-}
+/* Removed problematic .container override to rely on global centering */
 
 .about-text {
+    width: 100%;
     max-width: 800px;
-    /* Reduced width for better "centered" feeling */
-    margin: 0 auto;
+    /* Constrain width */
+    margin-left: auto;
+    /* Explicit auto margins */
+    margin-right: auto;
+
     font-size: clamp(1.1rem, 2vw, 1.3rem);
-    /* Slightly larger text */
     line-height: 1.6;
     color: var(--text-color);
     text-align: left;
-    /* Changed to left/straight line as requested */
+    /* Straight line text */
 }
 
 .hero-text {
