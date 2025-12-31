@@ -267,7 +267,12 @@ img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 100% !important;
+    /* Force full width override */
+    max-width: 100% !important;
+    /* reset any max-width */
+    margin: 0 !important;
+    padding: 0 20px;
     height: 100%;
     text-align: center;
 }
