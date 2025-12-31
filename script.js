@@ -20,13 +20,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Close menu when link is clicked
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            isMenuOpen = false;
-            overlay.classList.remove('active');
-            toggle.textContent = 'Menu';
+    if (navLinks) {
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                isMenuOpen = false;
+                overlay.classList.remove('active');
+                if (toggle) toggle.textContent = 'Menu';
+            });
         });
-    });
+    }
 
 
     // 2. Hover Reveal Effect

@@ -16,18 +16,22 @@
 
 <body>
 
+        <!-- Header -->
     <header class="header">
-        <div class="container header-container">
+        <div class="header-inner">
             <a href="index.html" class="logo">Zeest Fatima</a>
-            <nav class="nav">
-                <ul class="nav-list">
-                    <li><a href="index.html#about" class="nav-link">About</a></li>
-                    <li><a href="index.html#blog" class="nav-link">Blog</a></li>
-                    <li><a href="index.html#contact" class="nav-link">Contact</a></li>
-                </ul>
-            </nav>
+            <div class="nav-toggle">Menu</div>
         </div>
     </header>
+
+    <!-- Fullscreen Nav Overlay -->
+    <div class="nav-overlay">
+        <nav class="nav-menu">
+            <div class="nav-item"><a href="index.html#about" class="nav-link">About</a></div>
+            <div class="nav-item"><a href="index.html#work" class="nav-link">Work</a></div>
+            <div class="nav-item"><a href="index.html#contact" class="nav-link">Contact</a></div>
+        </nav>
+    </div>
 
     <main>
         <section class="section" style="padding-top: 150px;">
@@ -75,6 +79,7 @@
         </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 
 </html>
