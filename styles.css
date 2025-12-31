@@ -37,11 +37,11 @@
 html {
     font-size: 16px;
     scroll-behavior: auto;
+    background-color: var(--bg-color);
     /* Using Lenis or JS for smooth scroll usually requires auto here */
 }
 
 body {
-    background-color: var(--bg-color);
     color: var(--text-color);
     font-family: var(--font-main);
     -webkit-font-smoothing: antialiased;
@@ -61,7 +61,7 @@ body::before {
     background-repeat: repeat;
     opacity: 0.12;
     pointer-events: none;
-    z-index: 50;
+    z-index: -3;
     mix-blend-mode: overlay;
 }
 
@@ -77,7 +77,7 @@ body::after {
         linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
     background-size: 50px 50px;
     pointer-events: none;
-    z-index: 49;
+    z-index: -2;
     /* Behind texture but above bg */
 }
 
