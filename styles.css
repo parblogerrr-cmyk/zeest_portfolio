@@ -251,7 +251,26 @@ img {
     height: 100%;
     object-fit: cover;
     filter: grayscale(100%);
-    /* Maintain black/white theme */
+    /* Maintain black/white*/
+}
+
+/* About Section */
+.about-section {
+    min-height: 80vh;
+    /* Make it feel substantial */
+    display: flex;
+    align-items: center;
+    padding: 100px 0;
+}
+
+.about-text {
+    max-width: 1000px;
+    /* Increased from default constraint if any */
+    margin: 0 auto;
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    /* Slightly larger text */
+    line-height: 1.6;
+    color: var(--text-color);
 }
 
 .hero-text {
