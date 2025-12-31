@@ -314,10 +314,23 @@ img {
     /* Straight line text */
 }
 
+/* Article/Blog Styling */
+.blog-post .section-title {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 3rem;
+    text-transform: none;
+    /* Optional: Keep proper case for titles */
+    border-bottom: none;
+    /* Remove separator line in article header */
+    color: var(--text-color);
+}
+
 .content {
-    font-size: 1.35rem;
+    font-size: 1.6rem;
     line-height: 1.8;
     color: var(--text-color);
+    text-align: justify;
 }
 
 .hero-text {
