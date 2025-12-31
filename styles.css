@@ -2,13 +2,14 @@
 
 :root {
     /* Colors - Matte Black Theme */
-    --bg-color: #111111;
-    /* Matte Dark */
-    --text-color: #e6e6e6;
+    /* Colors - Matte Black Theme */
+    --bg-color: #1c1c1c;
+    /* Dark Grey Matte */
+    --text-color: #f0f0f0;
     /* Soft Off-White */
-    --text-muted: #999999;
+    --text-muted: #a0a0a0;
     --accent-color: #ffffff;
-    --border-color: #2a2a2a;
+    --border-color: #333333;
     /* Subtle border */
 
     /* Typography */
