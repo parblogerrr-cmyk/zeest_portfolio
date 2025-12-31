@@ -193,6 +193,30 @@ img {
     align-items: center;
     position: relative;
     padding-top: var(--header-height);
+    overflow: hidden;
+    /* Ensure image doesn't overflow */
+}
+
+.hero-bg-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.3;
+    /* Subtle */
+}
+
+.hero-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+    /* Maintain black/white theme */
 }
 
 .hero-text {
@@ -314,13 +338,26 @@ img {
 /* About Section */
 .about-section {
     max-width: 800px;
-    margin-left: auto;
+    margin: 0;
+    /* Left align: Removed margin-left: auto */
 }
 
 .about-text {
     font-size: 1.5rem;
     line-height: 1.6;
     margin-bottom: 2rem;
+}
+
+/* Animations */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .about-text p {
