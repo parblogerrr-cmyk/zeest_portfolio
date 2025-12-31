@@ -267,6 +267,7 @@ img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* Keeps the block centered */
     width: 100% !important;
     /* Force full width override */
     max-width: 100% !important;
@@ -274,7 +275,7 @@ img {
     margin: 0 !important;
     padding: 0 20px;
     height: 100%;
-    text-align: center;
+    /* text-align: center; Removed to allow straight line text */
 }
 
 .about-text {
@@ -285,8 +286,8 @@ img {
     /* Slightly larger text */
     line-height: 1.6;
     color: var(--text-color);
-    text-align: center;
-    /* Centered as requested */
+    text-align: left;
+    /* Changed to left/straight line as requested */
 }
 
 .hero-text {
